@@ -8,6 +8,6 @@ rgb_colors = []
 
 # Get the color code
 for color in colors:
-    rgb_colors.append(color.rgb)
+    rgb_colors.append(color)
 
 print(rgb_colors)
