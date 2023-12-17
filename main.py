@@ -39,13 +39,19 @@ screen.colormode(255)
 # t.dot(20)
 # print(t.pos())
 
-for _ in range(10):
-    random_color = random.choice(color_list)
-    t.dot(20, random_color)
+y_coordinate = -300.00
+for y in range(10):
     t.penup()
-    t.forward(50)
+    t.setposition(-300.00, y_coordinate)
+    y_coordinate += 50
     t.pendown()
-
+    for x in range(10):
+        random_color = random.choice(color_list)
+        t.dot(20, random_color)
+        t.penup()
+        t.forward(50)
+        t.pendown()
+print(t.position())
 
 screen.exitonclick()
 
