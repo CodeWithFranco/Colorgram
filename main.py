@@ -19,7 +19,7 @@
 # print(rgb_colors)
 import turtle
 from turtle import Turtle
-from random import random
+import random
 
 t = Turtle()
 screen = turtle.Screen()
@@ -38,12 +38,13 @@ screen.colormode(255)
 # t.pendown()
 # t.dot(20)
 # print(t.pos())
+
 for _ in range(10):
-    for i in range(10):
-        t.dot(20, t.pencolor(color_list[i]))
-        t.penup()
-        t.forward(50)
-        t.pendown()
+    random_color = random.choice(color_list)
+    t.dot(20, random_color)
+    t.penup()
+    t.forward(50)
+    t.pendown()
 
 
 screen.exitonclick()
